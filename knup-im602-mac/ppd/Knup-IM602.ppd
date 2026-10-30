@@ -1,0 +1,148 @@
+*PPD-Adobe: "4.3"
+*FormatVersion: "4.3"
+*FileVersion: "1.0"
+*LanguageVersion: English
+*LanguageEncoding: ISOLatin1
+*PCFileName: "KNUPIM602.PPD"
+*Manufacturer: "Knup"
+*Product: "(KP-IM602)"
+*ModelName: "Knup KP-IM602 80mm"
+*ShortNickName: "Knup KP-IM602 80mm"
+*NickName: "Knup KP-IM602 80mm (POS-80C)"
+*1284DeviceID: "MFG:Printer;MDL:POS-80C;CMD:ESC/POS;"
+*PSVersion: "(3010.000) 0"
+*LanguageLevel: "3"
+*ColorDevice: False
+*DefaultColorSpace: Gray
+*FileSystem: False
+*Throughput: "1"
+*LandscapeOrientation: Plus90
+*TTRasterizer: Type42
+*cupsVersion: 1.4
+*cupsModelNumber: 602
+*cupsManualCopies: False
+*cupsFilter: "application/vnd.cups-raster 0 /Library/Printers/Knup/Filter/rastertoim602"
+
+*% ===== Tamanho do papel =====
+*% Largura util de 72 mm (576 pontos a 203 dpi), igual ao driver Windows.
+*% "Rolo continuo" e o padrao do Windows: pagina bem comprida, e o espaco
+*% em branco do fim e removido automaticamente antes do corte.
+*OpenUI *PageSize/Papel: PickOne
+*OrderDependency: 10 AnySetup *PageSize
+*DefaultPageSize: Rolo80
+*PageSize Rolo80/80mm - Rolo continuo: "<</PageSize[204 9286]/ImagingBBox null>>setpagedevice"
+*PageSize X80Y297/80mm x 297mm: "<</PageSize[204 842]/ImagingBBox null>>setpagedevice"
+*PageSize X80Y200/80mm x 200mm: "<</PageSize[204 567]/ImagingBBox null>>setpagedevice"
+*PageSize X80Y150/80mm x 150mm: "<</PageSize[204 425]/ImagingBBox null>>setpagedevice"
+*PageSize X80Y100/80mm x 100mm: "<</PageSize[204 283]/ImagingBBox null>>setpagedevice"
+*CloseUI: *PageSize
+
+*OpenUI *PageRegion: PickOne
+*OrderDependency: 10 AnySetup *PageRegion
+*DefaultPageRegion: Rolo80
+*PageRegion Rolo80/80mm - Rolo continuo: "<</PageSize[204 9286]/ImagingBBox null>>setpagedevice"
+*PageRegion X80Y297/80mm x 297mm: "<</PageSize[204 842]/ImagingBBox null>>setpagedevice"
+*PageRegion X80Y200/80mm x 200mm: "<</PageSize[204 567]/ImagingBBox null>>setpagedevice"
+*PageRegion X80Y150/80mm x 150mm: "<</PageSize[204 425]/ImagingBBox null>>setpagedevice"
+*PageRegion X80Y100/80mm x 100mm: "<</PageSize[204 283]/ImagingBBox null>>setpagedevice"
+*CloseUI: *PageRegion
+
+*DefaultImageableArea: Rolo80
+*ImageableArea Rolo80: "0 0 204 9286"
+*ImageableArea X80Y297: "0 0 204 842"
+*ImageableArea X80Y200: "0 0 204 567"
+*ImageableArea X80Y150: "0 0 204 425"
+*ImageableArea X80Y100: "0 0 204 283"
+
+*DefaultPaperDimension: Rolo80
+*PaperDimension Rolo80: "204 9286"
+*PaperDimension X80Y297: "204 842"
+*PaperDimension X80Y200: "204 567"
+*PaperDimension X80Y150: "204 425"
+*PaperDimension X80Y100: "204 283"
+
+*VariablePaperSize: True
+*MaxMediaWidth: "204"
+*MaxMediaHeight: "9286"
+*HWMargins: 0 0 0 0
+*CustomPageSize True: "pop pop pop <</PageSize[5 -2 roll]/ImagingBBox null>>setpagedevice"
+*ParamCustomPageSize Width: 1 points 100 204
+*ParamCustomPageSize Height: 2 points 100 9286
+*ParamCustomPageSize WidthOffset: 3 points 0 0
+*ParamCustomPageSize HeightOffset: 4 points 0 0
+*ParamCustomPageSize Orientation: 5 int 0 0
+
+*% ===== Resolucao e cor (igual POS80.GPD: 203x203 dpi, monocromatico) =====
+*OpenUI *Resolution/Resolucao: PickOne
+*OrderDependency: 10 AnySetup *Resolution
+*DefaultResolution: 203dpi
+*Resolution 203dpi/203 dpi: "<</HWResolution[203 203]/cupsBitsPerColor 8/cupsRowCount 0/cupsRowFeed 0/cupsRowStep 0/cupsColorSpace 0/cupsColorOrder 0>>setpagedevice"
+*CloseUI: *Resolution
+
+*OpenUI *ColorModel/Cor: PickOne
+*OrderDependency: 10 AnySetup *ColorModel
+*DefaultColorModel: Gray
+*ColorModel Gray/Preto e branco: "<</cupsColorOrder 0/cupsColorSpace 0/cupsBitsPerColor 8>>setpagedevice"
+*CloseUI: *ColorModel
+
+*% ===== Opcoes da impressora (lidas pelo filtro) =====
+*OpenUI *IMCorte/Cortar papel: PickOne
+*OrderDependency: 20 AnySetup *IMCorte
+*DefaultIMCorte: Pagina
+*IMCorte Pagina/Depois de cada pagina: ""
+*IMCorte Fim/So no fim do trabalho: ""
+*IMCorte Nao/Nao cortar: ""
+*CloseUI: *IMCorte
+
+*OpenUI *IMAvanco/Avanco antes do corte: PickOne
+*OrderDependency: 20 AnySetup *IMAvanco
+*DefaultIMAvanco: 15
+*IMAvanco 0/0 mm: ""
+*IMAvanco 5/5 mm: ""
+*IMAvanco 10/10 mm: ""
+*IMAvanco 15/15 mm: ""
+*IMAvanco 20/20 mm: ""
+*IMAvanco 30/30 mm: ""
+*CloseUI: *IMAvanco
+
+*OpenUI *IMAparar/Remover espaco em branco: PickOne
+*OrderDependency: 20 AnySetup *IMAparar
+*DefaultIMAparar: Sim
+*IMAparar Sim/Sim (economiza papel): ""
+*IMAparar Nao/Nao: ""
+*CloseUI: *IMAparar
+
+*OpenUI *IMModo/Tipo de conteudo: PickOne
+*OrderDependency: 20 AnySetup *IMModo
+*DefaultIMModo: Texto
+*IMModo Texto/Texto e notas (nitido): ""
+*IMModo Foto/Fotos e logos (pontilhado): ""
+*CloseUI: *IMModo
+
+*OpenUI *IMEscuro/Escuridao: PickOne
+*OrderDependency: 20 AnySetup *IMEscuro
+*DefaultIMEscuro: Normal
+*IMEscuro Claro/Claro: ""
+*IMEscuro Normal/Normal: ""
+*IMEscuro Escuro/Escuro: ""
+*IMEscuro MuitoEscuro/Muito escuro: ""
+*CloseUI: *IMEscuro
+
+*OpenUI *IMGaveta/Abrir gaveta: PickOne
+*OrderDependency: 20 AnySetup *IMGaveta
+*DefaultIMGaveta: Nao
+*IMGaveta Nao/Nao: ""
+*IMGaveta Sim/Sim, antes de imprimir: ""
+*CloseUI: *IMGaveta
+
+*OpenUI *IMBipe/Bipar no fim: PickOne
+*OrderDependency: 20 AnySetup *IMBipe
+*DefaultIMBipe: Nao
+*IMBipe Nao/Nao: ""
+*IMBipe Sim/Sim: ""
+*CloseUI: *IMBipe
+
+*DefaultFont: Courier
+*Font Courier: Standard "(002.004S)" Standard ROM
+*Font Helvetica: Standard "(001.006S)" Standard ROM
+*Font Times-Roman: Standard "(001.007S)" Standard ROM

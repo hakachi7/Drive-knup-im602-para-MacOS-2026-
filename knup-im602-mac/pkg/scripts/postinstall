@@ -1,0 +1,13 @@
+#!/bin/bash
+# Roda como administrador logo depois que o instalador copia os arquivos.
+chown -R root:wheel /Library/Printers/Knup
+chmod 755 /Library/Printers/Knup/Filter/rastertoim602 \
+          /Library/Printers/Knup/adicionar-impressora.sh \
+          /Library/Printers/Knup/desinstalar.sh
+chown root:wheel /Library/Printers/PPDs/Contents/Resources/Knup-IM602.ppd
+chmod 644 /Library/Printers/PPDs/Contents/Resources/Knup-IM602.ppd
+
+# Se a impressora estiver ligada, ja cadastra. Se nao, o usuario pode
+# adicionar depois em Ajustes do Sistema > Impressoras (o Mac acha o driver sozinho).
+/Library/Printers/Knup/adicionar-impressora.sh >/dev/null 2>&1 || true
+exit 0

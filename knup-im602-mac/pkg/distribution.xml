@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<installer-gui-script minSpecVersion="2">
+    <title>Driver Knup KP-IM602 para Mac</title>
+    <welcome file="bemvindo.html" mime-type="text/html"/>
+    <license file="licenca.txt"/>
+    <conclusion file="concluido.html" mime-type="text/html"/>
+    <options customize="never" require-scripts="true" hostArchitectures="arm64,x86_64"/>
+    <domains enable_localSystem="true" enable_anywhere="false" enable_currentUserHome="false"/>
+    <volume-check><allowed-os-versions><os-version min="11.0"/></allowed-os-versions></volume-check>
+    <choices-outline><line choice="default"><line choice="cc.jvpereira.knup-im602"/></line></choices-outline>
+    <choice id="default"/>
+    <choice id="cc.jvpereira.knup-im602" visible="false">
+        <pkg-ref id="cc.jvpereira.knup-im602"/>
+    </choice>
+    <pkg-ref id="cc.jvpereira.knup-im602" version="@VERSION@" onConclusion="none">knup-im602-component.pkg</pkg-ref>
+</installer-gui-script>
